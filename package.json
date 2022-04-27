@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/AlisherARI/light-vue3-validation/issues"
   },
-  "homepage": "https://github.com/AlisherARI/light-vue3-validation#readme",
+  "homepage": "https://alisherari.github.io/light-vue3-validation-example",
   "dependencies": {
     "vue-demi": "^0.12.5"
   },
