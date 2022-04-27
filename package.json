@@ -1,6 +1,6 @@
 {
   "name": "light-vue3-validation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "Your form validations now being easy with light-vue3-validation",
   "main": "dist/index.js",
