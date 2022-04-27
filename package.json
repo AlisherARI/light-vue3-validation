@@ -1,0 +1,37 @@
+{
+  "name": "light-vue3-validation",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Your form validations now being easy with light-vue3-validation",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "build": "tsc ./dist/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlisherARI/light-vue3-validation.git"
+  },
+  "keywords": [
+    "validation",
+    "vue",
+    "vue3"
+  ],
+  "author": "AlisherARI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlisherARI/light-vue3-validation/issues"
+  },
+  "homepage": "https://github.com/AlisherARI/light-vue3-validation#readme",
+  "dependencies": {
+    "vue-demi": "^0.12.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.4",
+    "typescript": "^4.6.3",
+    "vue": "^3.2.33"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
