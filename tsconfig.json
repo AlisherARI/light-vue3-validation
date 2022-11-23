@@ -4,9 +4,10 @@
     "module": "commonjs",
     "rootDir": "./dist",
     "moduleResolution": "node",
+    "suppressImplicitAnyIndexErrors": true,
     "strict": true,
     "lib": ["esnext"],
-    "sourceMap": true,
+    "sourceMap": true
   },
   "exclude": [
     "node_modules"

@@ -1,9 +1,9 @@
 {
   "name": "light-vue3-validation",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": false,
-  "description": "Your form validations now being easy with light-vue3-validation",
-  "main": "dist/index.js",
+  "description": "Form validations for vue 3",
+  "main": "dist/index.ts",
   "types": "dist/types.d.ts",
   "scripts": {
     "build": "tsc ./dist/index.ts"
@@ -13,9 +13,11 @@
     "url": "git+https://github.com/AlisherARI/light-vue3-validation.git"
   },
   "keywords": [
+    "validating",
     "validation",
-    "vue",
-    "vue3"
+    "validate",
+    "vue 3",
+    "vue"
   ],
   "author": "AlisherARI",
   "license": "MIT",
