@@ -1,6 +1,6 @@
 import {ComputedRef, Ref, UnwrapNestedRefs, UnwrapRef} from 'vue-demi';
 
-export interface IRulesList {
+export declare interface IRulesList {
     required?: (value: string) => boolean;
     minLength?: (value: string, minLength: number) => boolean;
     maxLength?: (value: string, maxLength: number) => boolean;
@@ -10,35 +10,36 @@ export interface IRulesList {
     date?: (value: string) => boolean;
 }
 
-export type TObjectModel = Record<string, { model: TModel; rules: TRule[] }>;
-export type TModel = string | number | boolean | null | Date | Object | TObjectModel;
-export type TValidateObjectRefModel = Record<string, { model: TModel; rules: TRule[] }>;
+export declare type TObjectModel = Record<string, { model: TModel; rules: TRule[] }>;
+export declare type TModel = string | number | boolean | null | Date | Object | TObjectModel;
+export declare type TValidateObjectRefModel = Record<string, { model: TModel; rules: TRule[] }>;
 
-export type TSimpleRules = 'required' | 'email' | 'numeric' | 'date';
-export type THardRules = 'minLength' | 'maxLength' | 'maxValue';
-export type TRule = TSimpleRules | { type: THardRules; value: number };
-export type TModelRule = 'required' | 'email' | 'numeric' | 'date' | 'minLength' | 'maxLength' | 'maxValue';
+export declare type TSimpleRules = 'required' | 'email' | 'numeric' | 'date';
+export declare type THardRules = 'minLength' | 'maxLength' | 'maxValue';
+export declare type TRule = TSimpleRules | { type: THardRules; value: number };
+export declare type TModelRule = 'required' | 'email' | 'numeric' | 'date' | 'minLength' | 'maxLength' | 'maxValue';
 
-export type TValidatedItem<T> = {
+export declare type TValidatedItem<T> = {
     model: Ref<T>;
     isValid: Ref<boolean>;
     modelRules: UnwrapRef<Record<TModelRule, boolean>>;
 };
 
-export type TRules =
+export declare type TRules =
     | { [key in TSimpleRules]: Pick<IRulesList, key> }
     | {
     type: Pick<IRulesList, THardRules>;
     rule: TModelRule;
 };
 
-export type TValidatedObjectRef<T> = UnwrapNestedRefs<TValidatedReactiveObject<T>> & {
+export declare type TValidatedObjectRef<T> = UnwrapNestedRefs<TValidatedReactiveObject<T>> & {
     __isValid: ComputedRef<boolean>;
     __clean: ComputedRef<UnwrapRef<T>>;
 };
 
-export type TValidatedReactiveObject<T> = {
+export declare type TValidatedReactiveObject<T> = {
     [P in keyof T]: TValidatedItem<T[P]>;
 };
 
-export { useValidate, useValidateObject } from "./index"
+export declare function useValidate<T>(model: T, rules: TRule[]): UnwrapRef<TValidatedItem<T>>
+export declare function useValidateObject<T>(model: TValidateObjectRefModel): UnwrapNestedRefs<TValidatedObjectRef<T>>
