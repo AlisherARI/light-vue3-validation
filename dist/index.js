@@ -11,7 +11,6 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.useValidateObject = exports.useValidate = void 0;
 var vue_1 = require("vue");
 var rulesList = {
     /**
@@ -90,7 +89,6 @@ function useValidate(model, rules) {
         modelRules: modelRules
     });
 }
-exports.useValidate = useValidate;
 /**
  * Validation hook for object
  */
@@ -111,4 +109,7 @@ function useValidateObject(model) {
     var isValid = (0, vue_1.computed)(function () { return modelKeys.every(function (key) { return validatedFields[key].isValid; }); });
     return (0, vue_1.reactive)(__assign(__assign({}, validatedFields), { __isValid: isValid, __clean: clean }));
 }
-exports.useValidateObject = useValidateObject;
+module.exports = {
+    useValidate: useValidate,
+    useValidateObject: useValidateObject
+};

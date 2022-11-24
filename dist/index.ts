@@ -55,7 +55,7 @@ const rulesList: IRulesList = {
 /**
  * Validation hook for single variable
  */
-export function useValidate<T>(model: T, rules: TRule[]): UnwrapRef<TValidatedItem<T>> {
+function useValidate<T>(model: T, rules: TRule[]): UnwrapRef<TValidatedItem<T>> {
     const localRules: TRules = {} as TRules;
 
     // Get input rules from global rules list and copy them to local rules
@@ -104,7 +104,7 @@ export function useValidate<T>(model: T, rules: TRule[]): UnwrapRef<TValidatedIt
 /**
  * Validation hook for object
  */
-export function useValidateObject<T>(model: TValidateObjectRefModel): UnwrapNestedRefs<TValidatedObjectRef<T>> {
+function useValidateObject<T>(model: TValidateObjectRefModel): UnwrapNestedRefs<TValidatedObjectRef<T>> {
     const modelKeys: (keyof T)[] = Object.keys(model) as (keyof T)[];
     const validatedFields = reactive<TValidatedReactiveObject<T>>({} as TValidatedReactiveObject<T>);
 
@@ -129,4 +129,9 @@ export function useValidateObject<T>(model: TValidateObjectRefModel): UnwrapNest
         __isValid: isValid,
         __clean: clean,
     });
+}
+
+module.exports = {
+    useValidate,
+    useValidateObject
 }
