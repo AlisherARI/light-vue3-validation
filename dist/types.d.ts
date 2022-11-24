@@ -40,3 +40,5 @@ export type TValidatedObjectRef<T> = UnwrapNestedRefs<TValidatedReactiveObject<T
 export type TValidatedReactiveObject<T> = {
     [P in keyof T]: TValidatedItem<T[P]>;
 };
+
+export { useValidate, useValidateObject } from "./index"
