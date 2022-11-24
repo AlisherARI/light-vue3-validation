@@ -1,9 +1,9 @@
 {
   "name": "light-vue3-validation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "Form validations for vue 3",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/types.d.ts",
   "scripts": {
     "build": "tsc ./dist/index.ts"
@@ -26,7 +26,7 @@
   },
   "homepage": "https://alisherari.github.io/light-vue3-validation-example",
   "dependencies": {
-    "vue-demi": "^0.12.5"
+    "vue-demi": "^0.13.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.4",
