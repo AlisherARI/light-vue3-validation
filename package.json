@@ -1,6 +1,6 @@
 {
   "name": "light-vue3-validation",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "description": "Form validations for vue 3",
   "main": "dist/index.js",
@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/AlisherARI/light-vue3-validation.git"
   },
+  "type": "module",
   "keywords": [
     "validating",
     "validation",
