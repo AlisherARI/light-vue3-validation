@@ -128,7 +128,7 @@ reactive({
 ### Also, you can use it without typescript, just don't write a types
 _Errors object in `useValidate` hooks will be soon_
 
-## `useValidate`retrun
+## `useValidate` retrun
 Key | Value
 --- | ---
 model | Generic `<T>` 
