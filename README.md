@@ -97,9 +97,9 @@ reactive({
   };
   
   const user = useValidateObject<User>({
-    name: { model: '', ['required'] },
-    phone: { model: '', ['required', 'numeric', { type: 'minLength', value: 9 }] },
-    role: { model: '', ['required'] }
+    name: { model: '', rules: ['required'] },
+    phone: { model: '', rules: ['required', 'numeric', { type: 'minLength', value: 9 }] },
+    role: { model: '', rules: ['required'] }
   })
 
   const userNameErrors = computed<boolean | string>(() => {

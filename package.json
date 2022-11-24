@@ -1,6 +1,6 @@
 {
   "name": "light-vue3-validation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "Form validations for vue 3",
   "main": "dist/index.ts",
