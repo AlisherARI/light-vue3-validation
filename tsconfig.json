@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "rootDir": "./dist",
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
     "moduleResolution": "node",
     "suppressImplicitAnyIndexErrors": true,
+    "declaration": true,
     "strict": true,
     "lib": ["esnext"],
     "sourceMap": true
