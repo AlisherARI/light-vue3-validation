@@ -4,7 +4,7 @@ Fully typed form validation hooks for vue 3.
 ## Installation
 
 ```shell
-npm install light-vue3-validation
+npm install vue3-validation
 ```
 
 ## Usage
