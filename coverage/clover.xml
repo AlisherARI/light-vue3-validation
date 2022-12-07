@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670082918688" clover="3.2.0">
-  <project timestamp="1670082918688" name="All files">
-    <metrics statements="147" coveredstatements="76" conditionals="12" coveredconditionals="12" methods="13" coveredmethods="11" elements="172" coveredelements="99" complexity="0" loc="147" ncloc="147" packages="1" files="1" classes="1"/>
-    <file name="validators.ts" path="/Users/alisheraripov/Documents/work/libs/light-vue3-validation/dist/validators.ts">
-      <metrics statements="147" coveredstatements="76" conditionals="12" coveredconditionals="12" methods="13" coveredmethods="11"/>
+<coverage generated="1670389796484" clover="3.2.0">
+  <project timestamp="1670389796484" name="All files">
+    <metrics statements="151" coveredstatements="78" conditionals="12" coveredconditionals="12" methods="13" coveredmethods="11" elements="176" coveredelements="101" complexity="0" loc="151" ncloc="151" packages="1" files="1" classes="1"/>
+    <file name="index.ts" path="/Users/alisheraripov/Documents/work/libs/light-vue3-validation/dist/index.ts">
+      <metrics statements="151" coveredstatements="78" conditionals="12" coveredconditionals="12" methods="13" coveredmethods="11"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -151,6 +151,10 @@
       <line num="145" count="0" type="stmt"/>
       <line num="146" count="0" type="stmt"/>
       <line num="147" count="0" type="stmt"/>
+      <line num="148" count="0" type="stmt"/>
+      <line num="149" count="0" type="stmt"/>
+      <line num="150" count="1" type="stmt"/>
+      <line num="151" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

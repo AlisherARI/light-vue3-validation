@@ -1,5 +1,5 @@
 import { expect, test } from "@jest/globals";
-import { rulesList } from "../dist/validators"
+import { rulesList } from "../dist"
 
 const { maxValue: isMaxValue } = rulesList
 

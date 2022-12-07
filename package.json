@@ -1,10 +1,10 @@
 {
-  "name": "vue3-validation",
-  "version": "2.0.2",
+  "name": "light-vue3-validation",
+  "version": "2.1.0",
   "private": false,
   "description": "Form validations for vue 3",
-  "main": "dist/index.js",
-  "types": "dist/types.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/types.d.ts",
   "scripts": {
     "build": "tsc ./dist/index.ts",
     "test": "jest"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/AlisherARI/light-vue3-validation.git"
   },
-  "type": "module",
+  "type": "commonjs",
   "keywords": [
     "validating",
     "validation",
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/AlisherARI/light-vue3-validation/issues"
   },
-  "homepage": "https://alisherari.github.io/light-vue3-validation-example",
+  "homepage": "https://github.com/AlisherARI/light-vue3-validation",
   "dependencies": {
     "vue-demi": "^0.13.11"
   },

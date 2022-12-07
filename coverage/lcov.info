@@ -1,5 +1,5 @@
 TN:
-SF:dist/validators.ts
+SF:dist/index.ts
 FN:17,required
 FN:22,minLength
 FN:27,maxLength
@@ -175,8 +175,12 @@ DA:144,0
 DA:145,0
 DA:146,0
 DA:147,0
-LF:147
-LH:76
+DA:148,0
+DA:149,0
+DA:150,1
+DA:151,1
+LF:151
+LH:78
 BRDA:17,0,0,3
 BRDA:22,1,0,4
 BRDA:27,2,0,4

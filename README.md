@@ -4,7 +4,7 @@ Fully typed form validation hooks for vue 3.
 ## Installation
 
 ```shell
-npm install vue3-validation
+npm i -S light-vue3-validation
 ```
 
 ## Usage
@@ -125,20 +125,37 @@ reactive({
 </script>
 ```
 
+**If some filed in your object not need validation just write an empty array in rules `{ model: '', rules: [] }`**
+
 ### Also, you can use it without typescript, just don't write a types
 _Errors object in `useValidate` hooks will be soon_
 
 ## `useValidate` retrun
 Key | Value
 --- | ---
-model | Generic `<T>` 
-isValid | `boolean`
-modelRules | An object with key of validation keyword `required, numeric etc...` and value of `boolean`
+`model` | Generic `<T>` 
+`isValid` | `boolean`
+`modelRules` | An object with key of validation keyword `required, numeric etc...` and value of `boolean`
 
 ## `useValidateObject` return
 key | Value
 --- | ---
 Keys of your object | Keys wrapped by `useValidate` hook ` key: { model: ..., isValid: ..., modelRules: { ... } } `
-__isValid | `boolean`. Returns `true` if all `isValid` keys of your object items becomes `true`
-__clean | Returns `computed` **clean object** that you passed to hook with no wrapping by `useValidate` hook for each key
+`__isValid` | `boolean`. Returns `true` if all `isValid` keys of your object items becomes `true`
+`__clean` | Returns `computed` **clean object** that you passed to hook with no wrapping by `useValidate` hook for each key
+
+## Rules
+Rule name | Properties
+--- | ---
+`alpha` | Accepts only alphabetic characters (a-z and A-Z). Numbers will be failed
+`alphaNum` | Accepts only alphabetic and numeric characters (a-z A-Z 0-9)
+`between` | Accepts an array of range that your number will be. Example `[10, 30]`. Your number will be valid if it in this range
+`email` | Accepts a string which is email
+`ipAddress` | Accepts a string like `###.###.###.###`
+`maxLength` | Accepts a string which length is less then max value you passed
+`minLength` | Accepts a string which length is more then min value you passed
+`maxValue` | Accepts a number which is less then max value you passed
+`minValue` | Accepts a number which is more then min value you passed
+`numeric` | Accepts only number 0-9
+`required` | Accepts anything and will be failed if model is empty
 
