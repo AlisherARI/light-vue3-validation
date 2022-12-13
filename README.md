@@ -20,7 +20,7 @@ reactive({
 ```
 ```vue
 <template>
-  <formc @submit.prevent="submitForm">
+  <form @submit.prevent="submitForm">
     ...
     <input
         type="number"
@@ -29,7 +29,7 @@ reactive({
     />
     <p v-if="userIncomeError" class="input_error-message">{{ userIncomeError }}</p>
     ...
-  </formc>
+  </form>
 </template>
 
 <script setup lang="ts">
@@ -103,17 +103,17 @@ reactive({
   })
 
   const userNameErrors = computed<boolean | string>(() => {
-    if (!user.name.required) return 'Name is required'
+    if (!user.modelRules.name.required) return 'Name is required'
     return false
   })
   const userPhoneErrors = computed<boolean | string>(() => {
-    if (!user.phone.required) return 'Phone is required'
-    if (!user.phone.numeric) return 'Phone must a numeric'
-    if (!user.phone.minLength) return 'Phone must be at least 9 digits'
+    if (!user.modelRules.phone.required) return 'Phone is required'
+    if (!user.modelRules.phone.numeric) return 'Phone must a numeric'
+    if (!user.modelRules.phone.minLength) return 'Phone must be at least 9 digits'
     return false
   })
   const userRoleErrors = computed<boolean | string>(() => {
-    if (!user.role.required) return 'Role is required'
+    if (!user.modelRules.role.required) return 'Role is required'
     return false
   })
 

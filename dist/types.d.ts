@@ -1,6 +1,6 @@
 import {ComputedRef, Ref, UnwrapNestedRefs, UnwrapRef} from 'vue-demi';
 
-export declare interface IRulesList {
+gexport declare interface IRulesList {
 	required?: (value: string | number | boolean) => boolean;
 	minLength?: (value: string, minLength: number) => boolean;
 	maxLength?: (value: string, maxLength: number) => boolean;
@@ -18,8 +18,8 @@ export declare type TObjectModel = Record<string, { model: TModel; rules: TRule[
 export declare type TModel = string | number | boolean | null | Date | Object | TObjectModel;
 export declare type TValidateObjectRefModel = Record<string, { model: TModel; rules: TRule[] }>;
 
-export declare type TSimpleRules = 'required' | 'email' | 'numeric';
-export declare type THardRules = 'minLength' | 'maxLength' | 'maxValue';
+export declare type TSimpleRules = 'required' | 'email' | 'numeric' | 'alpha' | 'alphaNum' | 'ipAddress';
+export declare type THardRules = 'minLength' | 'maxLength' | 'maxValue' | 'minValue' | 'between';
 export declare type TRule = TSimpleRules | { type: THardRules; value: number | [number, number] };
 export declare type TModelRule = 'required' | 'email' | 'numeric' | 'minLength' | 'maxLength' | 'maxValue';
 
